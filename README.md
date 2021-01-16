@@ -4,9 +4,13 @@
 
 > RACF is a set of collaborative filtering approaches for solving the problem of predicting the Next Basket Recommendation.
 
-## Directory structure 
-After cloning this git repository it would be strutured following this schema :
 
+
+## Quick Start : 
+You can start playing with this implementation either by downloading the provided Jupyter Notebook "__*RecencyAwareCF.ipynb*__" or by __*CLI*__ by cloning this repository.  
+
+### Directory structure 
+After cloning this git repository it would be strutured following this schema :
 * NextBasketRecomSys
   * |-- src 
   * |--|-- main.py
@@ -15,8 +19,6 @@ After cloning this git repository it would be strutured following this schema :
   * |-- data
   * |--|-- instacart
   * |--|-- dunnhumby
-
-## Quick Start : 
 
 ### Requirements:
 * **Python 3.8+** (older version has not been tested)
@@ -27,7 +29,7 @@ After cloning this git repository it would be strutured following this schema :
 * **Scipy 1.5** (older version has not been tested)   
 > A requirement file is available.
 
-## Quick start with a subset of Instacart : 
+### Quick start with a subset of Instacart : 
 > Please first download the complete [instacart dataset](https://www.instacart.com/datasets/grocery-shopping-2017) and release the CSV files under  NextBasketRecomSys/data/instacart
 
 Next, now you ready to run **main.py** by specifying some argument (in the following order):
@@ -50,7 +52,7 @@ Next, now you ready to run **main.py** by specifying some argument (in the follo
     *. --top_k : rank-aware parameter, to select the number of items to recommend 
 ## Example of use: 
 ```
-python3 main.py --methode_name IPCF --recency 5 --asymmetry 1 --locality 5 --top_k 10
+Python3 main.py --methode_name IPCF --recency 5 --asymmetry 1 --locality 5 --top_k 10
 ```
 First, This will randomly sample transactions associated with __*10%*__ users and filter out products with __*<10 transactions*__ and users with less than __*2 baskets*__. 
 Once the preprocessing is done, it will use the Item-popularity-CF(**IPCF@r**) method to predict the next __top 10 items__ to recommend using the following parameter (r=5, alpha=1, q=5).
