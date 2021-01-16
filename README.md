@@ -42,14 +42,14 @@ Next, now you ready to run **main.py** by specifying some argument (in the follo
   * --verbose : to show data preprocessing progress Take True or False value (default:true)
 * __Methods args__:
   * --method_name : the chose which method to use from the framework implementation :
-    *. __UWPop__ : **U**ser-**W**ise **Pop**ularity method
-    *. __UPCF__ : **U**ser **Pop**ularity **C**ollaborative **F**iltering method 
-    *. __IPCF__: **I**tem **Pop**ularity **C**ollaborative **F**iltering method
+    * __UWPop__ : **U**ser-**W**ise **Pop**ularity method
+    * __UPCF__ : **U**ser **Pop**ularity **C**ollaborative **F**iltering method 
+    * __IPCF__: **I**tem **Pop**ularity **C**ollaborative **F**iltering method
   * __Method's parameters__:
-    *. --recency : Default=0, in the paper they used the following values {1,5,25,100,inf)  
-    *. --asymmetry :  Default=0, in the paper they used the following values {0,0.25,0.5,0.75,1}  
-    *. --locality : Default=1, in the paper they used the following values {1,5,10,50,100,1000}
-    *. --top_k : rank-aware parameter, to select the number of items to recommend 
+    * --recency : Default=0, in the paper they used the following values {1,5,25,100,inf)  
+    * --asymmetry :  Default=0, in the paper they used the following values {0,0.25,0.5,0.75,1}  
+    * --locality : Default=1, in the paper they used the following values {1,5,10,50,100,1000}
+    * --top_k : rank-aware parameter, to select the number of items to recommend 
 ## Example of use: 
 ```
 Python3 main.py --methode_name IPCF --recency 5 --asymmetry 1 --locality 5 --top_k 10
