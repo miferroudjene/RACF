@@ -30,7 +30,7 @@ After cloning this git repository it would be strutured following this schema :
 > A requirement file is available.
 
 ### Quick start with a subset of Instacart : 
-> Please first download the complete [instacart dataset](https://www.instacart.com/datasets/grocery-shopping-2017) and release the CSV files under  NextBasketRecomSys/data/instacart
+> Please first download the complete [instacart dataset](https://www.instacart.com/datasets/grocery-shopping-2017) and release the CSV files under __*NextBasketRecomSys/data/instacart*__ path
 
 Next, now you ready to run **main.py** by specifying some argument (in the following order):
 * __Dataset path__:
