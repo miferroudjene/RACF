@@ -1,1 +1,7 @@
 ###### Requirements ######
+Python == 3.8
+Numpy == 1.19
+Sklearn == 0.23+
+Pandas == 1.0+ 
+Scipy == 1.5 
+Similaripy 
