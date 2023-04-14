@@ -20,9 +20,9 @@ def uwPopMat(df_train, n_items, recency=0):
     # Get the number of user baskets Bu 
     BUCount = df_train.groupby(['UID'])['order'].max().reset_index(name='Bu')
     # Calculate the denominator which equal to Min(recency,Bu) for each user
-    BUCount['denominator'] = np.minimum(BUCount['Bu'],5)
+    BUCount['denominator'] = np.minimum(BUCount['Bu'],recency)
     # Calculater the order index, form where we start counting item appearance in recent orders   
-    BUCount['startindex'] = np.maximum(BUCount['Bu']-5,0)
+    BUCount['startindex'] = np.maximum(BUCount['Bu']-recency,0)
     # Calcualte item appearance in recent orders   
     tmp = pd.merge(BUCount, df_train,on='UID')[['UID','PID','order','startindex']]
     tmp = tmp.loc[(tmp['order']>=tmp['startindex'])==True].groupby(['UID','PID'])['order'].count().reset_index(name='numerator')
